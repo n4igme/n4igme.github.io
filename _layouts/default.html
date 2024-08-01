@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Prologue by HTML5 UP</title>
+		<title>Naigme's Log</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
@@ -14,162 +14,75 @@
 	<body class="is-preload">
 
 		<!-- Header -->
-			<div id="header">
+		<div id="header">
 
-				<div class="top">
+			<div class="top">
 
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image avatar48"><img src="{{ '/images/avatar.png' | relative_url }}" alt="" /></span>
-							<h1 id="title">Jane Doe</h1>
-							<p>Hyperspace Engineer</p>
-						</div>
-
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
-								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
-							</ul>
-						</nav>
-
+				<!-- Logo -->
+				<div id="logo">
+					<span class="image avatar48"><img src="{{ '/images/avatar.png' | relative_url }}" alt="" /></span>
+					<h1 id="title">Jane Doe</h1>
+					<p>Hyperspace Engineer</p>
 				</div>
 
-				<div class="bottom">
-
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-
-				</div>
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="{{ '/' | relative_url }}" id="top-link"><span class="icon solid fa-home">Home</span></a></li>
+						<li><a href="{{ '/#about' | relative_url }}" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+						<li><a href="{{ '/content' | relative_url }}" id="contact-link"><span class="icon solid fa-envelope">Content</span></a></li>
+						<li><a href="{{ '/posts' | relative_url }}" id="portfolio-link"><span class="icon solid fa-th">Posts</span></a></li>
+					</ul>
+				</nav>
 
 			</div>
+
+			<div class="bottom">
+
+				<!-- Social Icons -->
+				<ul class="icons">
+					<li><a href="https://medium.com/@bibib" class="icon brands fa-medium"><span class="label">Medium</span></a></li>
+					<li><a href="https://twitter.com/nitrospection" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="https://gitlab.com/n4igme" class="icon brands fa-gitlab"><span class="label">GitLab</span></a></li>
+					<li><a href="mailto:n4igme@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					<li><a href="https://patreon.com/nitrovert" class="icon solid fa-patreon"><span class="label">Patreon</span></a></li>
+				</ul>
+
+			</div>
+
+		</div>
 
 		<!-- Main -->
-			<div id="main">
-				{{ content }}
-				<!-- Intro -->
-
-
-				<!-- Portfolio -->
-					<section id="portfolio" class="two">
-						<div class="container">
-
-							<header>
-								<h2>Portfolio</h2>
-							</header>
-
-							<p>Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis
-							egestas rhoncus ridiculus in quis risus amet curabitur tempor orci penatibus.
-							Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis
-							fusce hendrerit lacus ridiculus.</p>
-
-							<div class="row">
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-										<header>
-											<h3>Ipsum Feugiat</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-										<header>
-											<h3>Rhoncus Semper</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-										<header>
-											<h3>Magna Nullam</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-										<header>
-											<h3>Natoque Vitae</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-										<header>
-											<h3>Dolor Penatibus</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-										<header>
-											<h3>Orci Convallis</h3>
-										</header>
-									</article>
-								</div>
-							</div>
-
-						</div>
-					</section>
-
-				<!-- About Me -->
-
-				<!-- Contact -->
-					<section id="contact" class="four">
-						<div class="container">
-
-							<header>
-								<h2>Contact</h2>
-							</header>
-
-							<p>Elementum sem parturient nulla quam placerat viverra
-							mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia
-							donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
-							orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
-
-							<form method="post" action="#">
-								<div class="row">
-									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
-									<div class="col-12">
-										<textarea name="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<input type="submit" value="Send Message" />
-									</div>
-								</div>
-							</form>
-
-						</div>
-					</section>
-
-			</div>
+		<div id="main">
+			{{ content }}
+		</div>
 
 		<!-- Footer -->
-			<div id="footer">
-
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-
-			</div>
+		<div id="footer">
+			<ul class="copyright">
+				<li>&copy; 2014. <a href="http://html5up.net">All rights reserved.</a></li>
+				<li>Naigme's Log</li>
+			</ul>
+		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
+		<script src="{{ '/assets/js/jquery.scrolly.min.js' | relative_url }}"></script>
+		<script src="{{ '/assets/js/jquery.scrollex.min.js' | relative_url }}"></script>
+		<script src="{{ '/assets/js/browser.min.js' | relative_url }}"></script>
+		<script src="{{ '/assets/js/breakpoints.min.js' | relative_url }}"></script>
+		<script src="{{ '/assets/js/util.js' | relative_url }}"></script>
+		<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2435055975573323" crossorigin="anonymous"></script>
+		<ins class="adsbygoogle"
+			style="display:block"
+			data-ad-format="fluid"
+			data-ad-layout-key="-h2+d+5c-9-3e"
+			data-ad-client="ca-pub-2435055975573323"
+			data-ad-slot="3780436362"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
 
 	</body>
 </html>
