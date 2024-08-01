@@ -15,42 +15,13 @@ title: Home
     </div>
 </section>
 
-<section id="post" class="two">
+<section id="about" class="three">
     <div class="container">
         <header>
-            <h2>LatePost</h2>
+            <h2>Who am I?</h2>
         </header>
-            
-        <div id="medium-feed"></div>
-        <script>
-            async function fetchMediumRSS() {
-                const rssFeedUrl = 'https://medium.com/feed/@bibib';
-                const rssToJsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`;
-
-                try {
-                    const response = await fetch(rssToJsonUrl);
-                    const data = await response.json();
-                    displayFeed(data);
-                } catch (error) {
-                    console.error('Error fetching RSS feed:', error);
-                }
-            }
-
-            function displayFeed(data) {
-                const feedContainer = document.getElementById('medium-feed');
-                const items = data.items;
-
-                items.forEach(item => {
-                    const feedItem = document.createElement('div');
-                    feedItem.innerHTML = `
-                        <h3>${new Date(item.pubDate).toLocaleDateString()} | <a href="${item.link}" target="_blank">${item.title}</a></h3>
-                    `;
-                    feedContainer.appendChild(feedItem);
-                });
-            }
-
-            document.addEventListener('DOMContentLoaded', fetchMediumRSS);
-        </script>
+        <a href="#" class="image featured"><img src="{{ '/images/unnamed.jpg' | relative_url }}" alt="" /></a>
+        <p>Be <b>Red</b>, feel <b>Blue</b>, and yet behave <b>Purple</b>.</p>
     </div>
 </section>
 
@@ -91,12 +62,41 @@ title: Home
     <iframe id="video" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
 </section>
 
-<section id="about" class="three">
+<section id="post" class="two">
     <div class="container">
         <header>
-            <h2>Who am I?</h2>
+            <h2>LatePost</h2>
         </header>
-        <a href="#" class="image featured"><img src="{{ '/images/unnamed.jpg' | relative_url }}" alt="" /></a>
-        <p>Be <b>Red</b>, feel <b>Blue</b>, and yet behave <b>Purple</b>.</p>
+            
+        <div id="medium-feed"></div>
+        <script>
+            async function fetchMediumRSS() {
+                const rssFeedUrl = 'https://medium.com/feed/@bibib';
+                const rssToJsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`;
+
+                try {
+                    const response = await fetch(rssToJsonUrl);
+                    const data = await response.json();
+                    displayFeed(data);
+                } catch (error) {
+                    console.error('Error fetching RSS feed:', error);
+                }
+            }
+
+            function displayFeed(data) {
+                const feedContainer = document.getElementById('medium-feed');
+                const items = data.items;
+
+                items.forEach(item => {
+                    const feedItem = document.createElement('div');
+                    feedItem.innerHTML = `
+                        <h3>${new Date(item.pubDate).toLocaleDateString()} | <a href="${item.link}" target="_blank">${item.title}</a></h3>
+                    `;
+                    feedContainer.appendChild(feedItem);
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', fetchMediumRSS);
+        </script>
     </div>
 </section>
