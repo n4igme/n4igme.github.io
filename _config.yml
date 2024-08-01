@@ -1,0 +1,10 @@
+title: Naigme's Log
+email: n4igme@gmail.com
+description: A personal journey in the InfoSec world.
+baseurl: ""
+url: "https://n4igme.github.io"
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
