@@ -15,16 +15,6 @@ title: Home
     </div>
 </section>
 
-<section id="about" class="three">
-    <div class="container">
-        <header>
-            <h2>Who am I?</h2>
-        </header>
-        <a href="#" class="image featured"><img src="{{ '/images/unnamed.jpg' | relative_url }}" alt="" /></a>
-        <p>Be <b>Red</b>, feel <b>Blue</b>, and yet behave <b>Purple</b>.</p>
-    </div>
-</section>
-
 <section id="post" class="two">
     <div class="container">
         <header>
@@ -99,4 +89,14 @@ title: Home
         </header>
     </div>
     <iframe id="video" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+</section>
+
+<section id="about" class="three">
+    <div class="container">
+        <header>
+            <h2>Who am I?</h2>
+        </header>
+        <a href="#" class="image featured"><img src="{{ '/images/unnamed.jpg' | relative_url }}" alt="" /></a>
+        <p>Be <b>Red</b>, feel <b>Blue</b>, and yet behave <b>Purple</b>.</p>
+    </div>
 </section>
