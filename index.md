@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
- <section id="home" class="one dark cover">
+<section id="home" class="one dark cover">
     <div class="container">
         <header>
             <h2 class="alt">Hi! This is just a personal log of my stuff.</h2>
@@ -15,7 +15,7 @@ title: Home
     </div>
 </section>
 
-<section id="about" class="three">
+<section id="about" class="two">
     <div class="container">
         <header>
             <h2>Who am I?</h2>
@@ -25,8 +25,54 @@ title: Home
     </div>
 </section>
 
+<section id="content" class="three">
+    <div class="container">
+        <header>
+            <h2>YouTube Channel</h2>
+        </header>
+    </div>
+    <iframe id="video" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+</section>
+
+<section id="post" class="four">
+    <div class="container">
+        <header>
+            <h2>LatePost</h2>
+        </header>
+            
+        <div id="medium-feed"></div>
+    </div>
+</section>
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => section.style.display = 'none');
+
+        // Function to show the selected section and hide others
+        function showSection(selectedId) {
+            sections.forEach(section => {
+                if (section.id === selectedId) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+
+        // Add event listeners for navigation (modify this part according to your navigation setup)
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                showSection(targetId);
+            });
+        });
+
+        // Show the home section by default
+        showSection('home');
+
+        // YouTube API integration
         const API_KEY = 'AIzaSyCdiOBx7On0ZdgQpPRrvv8iXOBgsXwS2SQ';
         const CHANNEL_ID = 'UCk8gNn8kHS0muE_d2jRuIpw';
         const API_URL = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=20`;
@@ -49,54 +95,35 @@ title: Home
             }
         }
 
-        // Fetch and embed a random video when the page loads
         fetchAndEmbedVideo();
+
+        // Medium RSS feed integration
+        async function fetchMediumRSS() {
+            const rssFeedUrl = 'https://medium.com/feed/@bibib';
+            const rssToJsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`;
+
+            try {
+                const response = await fetch(rssToJsonUrl);
+                const data = await response.json();
+                displayFeed(data);
+            } catch (error) {
+                console.error('Error fetching RSS feed:', error);
+            }
+        }
+
+        function displayFeed(data) {
+            const feedContainer = document.getElementById('medium-feed');
+            const items = data.items;
+
+            items.forEach(item => {
+                const feedItem = document.createElement('div');
+                feedItem.innerHTML = `
+                    <h3>${new Date(item.pubDate).toLocaleDateString()} | <a href="${item.link}" target="_blank">${item.title}</a></h3>
+                `;
+                feedContainer.appendChild(feedItem);
+            });
+        }
+
+        fetchMediumRSS();
     });
 </script>
-<section id="content" class="four">
-    <div class="container">
-        <header>
-            <h2>YouTube Channel</h2>
-        </header>
-    </div>
-    <iframe id="video" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
-</section>
-
-<section id="post" class="two">
-    <div class="container">
-        <header>
-            <h2>LatePost</h2>
-        </header>
-            
-        <div id="medium-feed"></div>
-        <script>
-            async function fetchMediumRSS() {
-                const rssFeedUrl = 'https://medium.com/feed/@bibib';
-                const rssToJsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`;
-
-                try {
-                    const response = await fetch(rssToJsonUrl);
-                    const data = await response.json();
-                    displayFeed(data);
-                } catch (error) {
-                    console.error('Error fetching RSS feed:', error);
-                }
-            }
-
-            function displayFeed(data) {
-                const feedContainer = document.getElementById('medium-feed');
-                const items = data.items;
-
-                items.forEach(item => {
-                    const feedItem = document.createElement('div');
-                    feedItem.innerHTML = `
-                        <h3>${new Date(item.pubDate).toLocaleDateString()} | <a href="${item.link}" target="_blank">${item.title}</a></h3>
-                    `;
-                    feedContainer.appendChild(feedItem);
-                });
-            }
-
-            document.addEventListener('DOMContentLoaded', fetchMediumRSS);
-        </script>
-    </div>
-</section>
