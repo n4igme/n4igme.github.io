@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
- <section id="top" class="one dark cover">
+ <section id="home" class="one dark cover">
     <div class="container">
         <header>
             <h2 class="alt">Hi! This is just a personal log of my stuff.</h2>
