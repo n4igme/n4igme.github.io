@@ -73,7 +73,7 @@ title: Home
         showSection('home');
 
         // YouTube API integration
-        const API_KEY = 'AIzaSyCdiOBx7On0ZdgQpPRrvv8iXOBgsXwS2SQ';
+        const API_KEY = 'AIzaSyDpHLLQhbG4pZe-BDbRqQNsyI5QHNpgFoE';
         const CHANNEL_ID = 'UCk8gNn8kHS0muE_d2jRuIpw';
         const API_URL = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=20`;
 
