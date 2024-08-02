@@ -31,7 +31,8 @@ title: Home
             <h2>YouTube Channel</h2>
         </header>
     </div>
-    <iframe id="video" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ddA7YTXaEF8" frameborder="0" allowfullscreen></iframe><br/>
+    <a href="https://www.youtube.com/channel/UCk8gNn8kHS0muE_d2jRuIpw" target="_blank">Visit my YouTube Channel</a>
 </section>
 
 <section id="post" class="four">
@@ -71,31 +72,6 @@ title: Home
 
         // Show the home section by default
         showSection('home');
-
-        // YouTube API integration
-        const API_KEY = 'AIzaSyC59QhPeb7P4afVhdRAz6iyBwqZybOW8rE';
-        const CHANNEL_ID = 'UCk8gNn8kHS0muE_d2jRuIpw';
-        const API_URL = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=20`;
-
-        async function fetchAndEmbedVideo() {
-            try {
-                const response = await fetch(API_URL);
-                const data = await response.json();
-                const videos = data.items.filter(item => item.id.videoId);
-
-                if (videos.length > 0) {
-                    const randomVideo = videos[Math.floor(Math.random() * videos.length)];
-                    const videoId = randomVideo.id.videoId;
-                    document.getElementById('video').src = `https://www.youtube.com/embed/${videoId}`;
-                } else {
-                    console.log('No videos found');
-                }
-            } catch (error) {
-                console.error('Error fetching videos:', error);
-            }
-        }
-
-        fetchAndEmbedVideo();
 
         // Medium RSS feed integration
         async function fetchMediumRSS() {
