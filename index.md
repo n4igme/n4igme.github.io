@@ -41,7 +41,7 @@ title: Home
             <h2>LatePost</h2>
         </header>
             
-        <div id="medium-feed">
+        <div id="medium-feed" style="text-align: left;">
             <h3>06/28/2024 | <a href="https://pentestmag.com/just-script-your-own-vulnerability-scanner-tools/" target="_blank">SCRIPT: Your own Vulnerability Scanner Tools</a></h3>
             <h3>12/04/2023 | <a href="https://pentestmag.com/ensuring-application-security-in-the-workplace/" target="_blank">ENSURING: Application Security in the Workplace</a></h3>
         </div>
