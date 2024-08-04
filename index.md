@@ -42,8 +42,8 @@ title: Home
         </header>
             
         <div id="medium-feed">
-            <h3>28/06/2024 | <a href="https://pentestmag.com/just-script-your-own-vulnerability-scanner-tools/" target="_blank">Just Script Your own Vulnerability Scanner Tools</a></h3>
-            <h3>04/12/2023 | <a href="https://pentestmag.com/ensuring-application-security-in-the-workplace/" target="_blank">Ensuring Application Security in the Workplace</a></h3>
+            <h3>06/28/2024 | <a href="https://pentestmag.com/just-script-your-own-vulnerability-scanner-tools/" target="_blank">SCRIPT: Your own Vulnerability Scanner Tools</a></h3>
+            <h3>12/04/2023 | <a href="https://pentestmag.com/ensuring-application-security-in-the-workplace/" target="_blank">ENSURING: Application Security in the Workplace</a></h3>
         </div>
     </div>
 </section>
