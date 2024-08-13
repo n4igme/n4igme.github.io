@@ -14,7 +14,7 @@ title: Home
                 <article class="item">
                     <a href="https://github.com/n4igme/pvascan" class="image fit"><img src="/images/pythonvascan.jpg" alt="" /></a>
                     <header>
-                        <h3 style="color: #333;">Python Vulnerability Scanner Tool</h3>
+                        <h3 style="color: #333;">Python Vulnerability Scanner</h3>
                     </header>
                 </article>
             </div>
