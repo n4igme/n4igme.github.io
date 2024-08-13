@@ -55,7 +55,7 @@ title: Home
                         <h3>The SecOps Group</h3>
                     </header>
                 </article>
-                <article class="item">
+                <article class="item" style="color: #333;">
                     <a href="https://cyberwarfare.live/" class="image fit"><img src="{{ '/images/CyberWarfareLabs.png' | relative_url }}" alt="" /></a>
                     <header>
                         <h3>CyberWarfare Labs</h3>
