@@ -30,7 +30,16 @@ This project uses GitHub Pages to host the site. To run this site locally, follo
 
    ```bash
    git clone https://github.com/n4igme/n4igme.github.io.git
+
+2. **Navigate to the Project Directory**
+
+   ```bash
    cd n4igme.github.io
+
+3. **Serve the Site Locally**
+
+	You can use a local server to view the site:
+   ```bash
    # If you have Ruby installed
    bundle exec jekyll serve
    # Or use a simple HTTP server
