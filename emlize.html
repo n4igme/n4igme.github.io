@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMARC Check and Extract Links/Attachments</title>
+</head>
+<body>
+    <input type="file" id="emlFileInput">
+    <pre id="output"></pre>
+
+    <script>
+        document.getElementById('emlFileInput').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                const content = e.target.result;
+                parseEmlContent(content);
+            };
+
+            reader.readAsText(file);
+        });
+
+        function parseEmlContent(content) {
+            const spfMatch = content.match(/Received-SPF: (.+)/);
+            const dkimMatch = content.match(/DKIM-Signature: (.+)/);
+
+            const output = document.getElementById('output');
+            output.textContent = '';
+
+            if (spfMatch) {
+                output.textContent += `SPF Result: ${spfMatch[1]}\n\n`;
+            } else {
+                output.textContent += `SPF not found in headers.\n\n`;
+            }
+
+            if (dkimMatch) {
+                output.textContent += `DKIM-Signature found: ${dkimMatch[1]}\n\n`;
+            } else {
+                output.textContent += `DKIM-Signature not found in headers.\n\n`;
+            }
+
+            // Extract links from the content
+            const links = extractLinks(content);
+            if (links.length > 0) {
+                output.textContent += 'Extracted Links:\n';
+                links.forEach(link => output.textContent += `${link}\n`);
+                output.textContent += '\n';
+            } else {
+                output.textContent += 'No links found.\n\n';
+            }
+
+            // Extract attachments from the content
+            const attachments = extractAttachments(content);
+            if (attachments.length > 0) {
+                output.textContent += 'Extracted Attachments:\n';
+                attachments.forEach(attachment => output.textContent += `Filename: ${attachment.filename}, MIME Type: ${attachment.mimeType}\n`);
+                output.textContent += '\n';
+            } else {
+                output.textContent += 'No attachments found.\n\n';
+            }
+        }
+
+        function extractLinks(content) {
+            const linkRegex = /https?:\/\/[^\s]+/g;
+            return content.match(linkRegex) || [];
+        }
+
+        function extractAttachments(content) {
+            const attachments = [];
+            const boundaryMatches = content.match(/boundary="([^"]+)"/);
+
+            if (boundaryMatches && boundaryMatches.length > 1) {
+                const boundary = boundaryMatches[1];
+                const parts = content.split(`--${boundary}`);
+
+                parts.forEach(part => {
+                    const filenameMatch = part.match(/filename="([^"]+)"/);
+                    const mimeTypeMatch = part.match(/Content-Type:\s([^\s;]+)/);
+
+                    if (filenameMatch && mimeTypeMatch) {
+                        attachments.push({
+                            filename: filenameMatch[1],
+                            mimeType: mimeTypeMatch[1]
+                        });
+                    }
+                });
+            }
+
+            return attachments;
+        }
+    </script>
+</body>
+</html>
