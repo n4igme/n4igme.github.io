@@ -56,7 +56,7 @@ title: Home
                     </header>
                 </article>
                 <article class="item">
-                    <a href="https://cyberwarfare.live/" class="image fit"><img src="{{ '/images/CyberWarfareLabs.png' | relative_url }}" alt="" /></a>
+                    <a href="https://cyberwarfare.live/" class="image fit"><img src="{{ '/images/CyberWarfareLabs.jpeg' | relative_url }}" alt="" /></a>
                     <header>
                         <h3>CyberWarfare Labs</h3>
                     </header>
