@@ -38,7 +38,7 @@ title: Home
         <header>
             <h2>Who am I?</h2>
         </header>
-        <p>Be <b>Red</b>, feel <b>Blue</b>, and yet behave <b>Purple</b>.</p>
+        <p>Be <b style="color: red;">Red</b>, feel <b style="color: blue;">Blue</b>, and yet behave <b style="color: purple;">Purple</b>.</p>
         <div class="row">
             <div class="col-4 col-12-mobile">
                 <article class="item">
