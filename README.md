@@ -1,40 +1,37 @@
-Prologue by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# n4igme.github.io
 
+Welcome to the repository for [n4igme.github.io](https://n4igme.github.io), a personal website and blog showcasing various tools, projects, and resources related to cybersecurity, technology, and more.
 
-This is Prologue, a simple, single page responsive site template. It features a
-clean, minimalistic design and a sticky sidebar with navigation-linked scrolling.
+## Table of Contents
 
-Demo content images* are courtesy of the ridiculously talented Felicia Simion. Check out
-more of her amazing work over at deviantART:
+- [About](#about)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-http://ineedchemicalx.deviantart.com/
+## About
 
-(* = Not included! Only meant for use with my own on-site demo, so please do NOT download
-and/or use any of Felicia's work without her explicit permission!)
+This repository contains the source code for my personal website, hosted on GitHub Pages. The website includes information about various projects, tools, and articles related to cybersecurity and technology.
 
-Demo banner images* courtesy of Unsplash, a radtastic collection of CC0 (public domain)
-images you can use for pretty much whatever.
+## Features
 
-(* = Not included)
+- **Project Showcases**: Detailed descriptions of various cybersecurity tools and resources.
+- **Blog Posts**: Articles on different topics related to technology and cybersecurity.
+- **Interactive Elements**: Links to external resources and tools.
 
-AJ
-aj@lkn.io | @ajlkn
+## Installation
 
-PS: Not sure how to get that contact form working? Give formspree.io a try (it's awesome).
+This project uses GitHub Pages to host the site. To run this site locally, follow these steps:
 
+1. **Clone the Repository**
 
-Credits:
-
-	Demo Images:
-		Felicia Simion (ineedchemicalx.deviantart.com)
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+   ```bash
+   git clone https://github.com/n4igme/n4igme.github.io.git
+   cd n4igme.github.io
+   # If you have Ruby installed
+   bundle exec jekyll serve
+   # Or use a simple HTTP server
+   python -m http.server
