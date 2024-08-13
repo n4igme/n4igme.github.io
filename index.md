@@ -33,7 +33,7 @@ title: Home
     </div>
 </section>
 
-<section id="about" class="three">
+<section id="about" class="two">
     <div class="container">
         <header>
             <h2>Who am I?</h2>
@@ -55,7 +55,7 @@ title: Home
                         <h3>The SecOps Group</h3>
                     </header>
                 </article>
-                <article class="item" style="color: #333;">
+                <article class="item">
                     <a href="https://cyberwarfare.live/" class="image fit"><img src="{{ '/images/CyberWarfareLabs.png' | relative_url }}" alt="" /></a>
                     <header>
                         <h3>CyberWarfare Labs</h3>
@@ -74,7 +74,7 @@ title: Home
     </div>
 </section>
 
-<section id="content" class="two">
+<section id="content" class="three">
     <div class="container">
         <header>
             <h2>YouTube Channel</h2>
