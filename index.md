@@ -9,10 +9,10 @@ title: Home
             <h2 class="alt">Hi! This is just a personal log of my stuff.</h2>
             <p>Don't expect too much, please...</p>
         </header>
-        <div class="row">
+         <div class="row">
             <div class="col-4 col-12-mobile">
                 <article class="item">
-                    <a href="https://github.com/n4igme/pvascan" class="image fit"><img src="/images/pythonvascan.jpg" alt="" /></a>
+                    <a href="https://github.com/n4igme/pvascan" class="image fit"><img src="{{ '/images/pythonvascan.jpg' | relative_url }}" alt="" /></a>
                     <header>
                         <h3 style="color: #333;">Python Vulnerability Scanner</h3>
                     </header>
@@ -20,7 +20,7 @@ title: Home
             </div>
             <div class="col-4 col-12-mobile">
                 <article class="item">
-                    <a href="https://n4igme.github.io/emlize/" class="image fit"><img src="/images/emailanalysis.jpg" alt="" /></a>
+                    <a href="https://n4igme.github.io/emlize/" class="image fit"><img src="{{ '/images/emailanalysis.jpg' | relative_url }}" alt="" /></a>
                     <header>
                         <h3 style="color: #333;">eMail Analyst Tools</h3>
                     </header>
@@ -38,8 +38,34 @@ title: Home
         <header>
             <h2>Who am I?</h2>
         </header>
-        <a href="#" class="image featured"><img src="{{ '/images/unnamed.jpg' | relative_url }}" alt="" /></a>
         <p>Be <b>Red</b>, feel <b>Blue</b>, and yet behave <b>Purple</b>.</p>
+        <div class="row">
+            <div class="col-4 col-12-mobile">
+                <article class="item">
+                    <a href="https://training.linuxfoundation.org/certification-catalog/" class="image fit"><img src="{{ '/images/LinuxFoundation.png' | relative_url }}" alt="" /></a>
+                    <header>
+                        <h3>The Linux Foundation</h3>
+                    </header>
+                </article>
+            </div>
+            <div class="col-4 col-12-mobile">
+                <article class="item">
+                    <a href="https://secops.group/" class="image fit"><img src="{{ '/images/TheSecOpsGroup.png' | relative_url }}" alt="" /></a>
+                    <header>
+                        <h3>The SecOps Group</h3>
+                    </header>
+                </article>
+            </div>
+            <div class="col-4 col-12-mobile">
+                <article class="item">
+                    <a href="https://www.qualys.com/training/" class="image fit"><img src="{{ '/images/Qualys.png' | relative_url }}" alt="" /></a>
+                    <header>
+                        <h3>Qualys</h3>
+                    </header>
+                </article>
+            </div>
+        </div>
+        <a href="#" class="image featured"><img src="{{ '/images/unnamed.jpg' | relative_url }}" alt="" /></a>
     </div>
 </section>
 
