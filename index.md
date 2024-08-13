@@ -56,6 +56,12 @@ title: Home
             </div>
             <div class="col-4 col-12-mobile">
                 <article class="item">
+                    <a href="https://csilinux.com/academy/" class="image fit"><img src="{{ '/images/CSILinuxCI.png' | relative_url }}" alt="" /></a>
+                    <header>
+                        <h3>CSI Linux</h3>
+                    </header>
+                </article>
+                <article class="item">
                     <a href="https://www.hackerrank.com/skills-verification/" class="image fit"><img src="{{ '/images/HackerRank.png' | relative_url }}" alt="" /></a>
                     <header>
                         <h3>HackerRank</h3>
