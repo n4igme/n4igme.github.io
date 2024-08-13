@@ -9,6 +9,50 @@ title: Home
             <h2 class="alt">Hi! This is just a personal log of my stuff.</h2>
             <p>Don't expect too much, please...</p>
         </header>
+        <div class="row">
+            <div class="col-4 col-12-mobile">
+                <article class="item">
+                    <a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+                    <header>
+                        <h3>Ipsum Feugiat</h3>
+                    </header>
+                </article>
+                <article class="item">
+                    <a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+                    <header>
+                        <h3>Rhoncus Semper</h3>
+                    </header>
+                </article>
+            </div>
+            <div class="col-4 col-12-mobile">
+                <article class="item">
+                    <a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
+                    <header>
+                        <h3>Magna Nullam</h3>
+                    </header>
+                </article>
+                <article class="item">
+                    <a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
+                    <header>
+                        <h3>Natoque Vitae</h3>
+                    </header>
+                </article>
+            </div>
+            <div class="col-4 col-12-mobile">
+                <article class="item">
+                    <a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
+                    <header>
+                        <h3>Dolor Penatibus</h3>
+                    </header>
+                </article>
+                <article class="item">
+                    <a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
+                    <header>
+                        <h3>Orci Convallis</h3>
+                    </header>
+                </article>
+            </div>
+        </div>
         <footer>
             <a href="https://github.com/n4igme" class="icon brands fa-github-square"> View on GitHub</a>
         </footer>
