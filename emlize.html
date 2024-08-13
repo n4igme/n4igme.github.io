@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eMail Analyst Tool</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
-    <input type="file" id="emlFileInput">
-    <pre id="output"></pre>
+    <div>
+        <h1>eMail Analyst Tool</h1>
+        <input type="file" id="emlFileInput">
+        <pre id="output"></pre>
+    </div>
 
     <script>
         document.getElementById('emlFileInput').addEventListener('change', function (event) {
