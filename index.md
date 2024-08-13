@@ -9,7 +9,7 @@ title: Home
             <h2 class="alt">Hi! This is just a personal log of my stuff.</h2>
             <p>Don't expect too much, please...</p>
         </header>
-         <div class="row">
+        <div class="row">
             <div class="col-4 col-12-mobile">
                 <article class="item">
                     <a href="https://github.com/n4igme/pvascan" class="image fit"><img src="{{ '/images/pythonvascan.jpg' | relative_url }}" alt="" /></a>
@@ -91,6 +91,24 @@ title: Home
         </header>
             
         <div id="medium-feed"></div>
+        <div class="row">
+            <div class="col-4 col-12-mobile">
+                <article class="item">
+                    <a href="https://pentestmag.com/ensuring-application-security-in-the-workplace/" class="image fit"><img src="https://pentestmag.com/wp-content/uploads/2023/12/hakin9_Application_Security_in_the_Workplace_30ff5068-8db4-4250-9f01-6724fd3bdde8.jpg" alt="" /></a>
+                    <header>
+                        <h3>Ensuring Application Security in the Workplace</h3>
+                    </header>
+                </article>
+            </div>
+            <div class="col-4 col-12-mobile">
+                <article class="item">
+                    <a href="https://pentestmag.com/just-script-your-own-vulnerability-scanner-tools/" class="image fit"><img src="https://pentestmag.com/wp-content/uploads/2024/06/hakin9_script_Vulnerability_Scanner_Tools_dabc7660-b484-464d-bf36-86b89cfb9f9b.jpg" alt="" /></a>
+                    <header>
+                        <h3>Just Script Your own Vulnerability Scanner Tools</h3>
+                    </header>
+                </article>
+            </div>
+        </div>
     </div>
 </section>
 
