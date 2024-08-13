@@ -12,7 +12,7 @@ title: Home
         <div class="row">
             <div class="col-4 col-12-mobile">
                 <article class="item">
-                    <a href="https://github.com/n4igme/pvascan" class="image fit"><img src="" alt="" /></a>
+                    <a href="https://github.com/n4igme/pvascan" class="image fit"><img src="/images/pythonvascan.jpg" alt="" /></a>
                     <header>
                         <h3>Python Vulnerability Scanner Tool</h3>
                     </header>
@@ -20,7 +20,7 @@ title: Home
             </div>
             <div class="col-4 col-12-mobile">
                 <article class="item">
-                    <a href="https://n4igme.github.io/emlize/" class="image fit"><img src="" alt="" /></a>
+                    <a href="https://n4igme.github.io/emlize/" class="image fit"><img src="/images/emailanalysis.jpg" alt="" /></a>
                     <header>
                         <h3>eMail Analyst Tools</h3>
                     </header>
