@@ -33,7 +33,7 @@ title: Home
     </div>
 </section>
 
-<section id="about" class="two">
+<section id="about" class="three">
     <div class="container">
         <header>
             <h2>Who am I?</h2>
@@ -43,7 +43,7 @@ title: Home
     </div>
 </section>
 
-<section id="content" class="three">
+<section id="content" class="two">
     <div class="container">
         <header>
             <h2>YouTube Channel</h2>
