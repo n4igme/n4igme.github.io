@@ -50,6 +50,12 @@ title: Home
             </div>
             <div class="col-4 col-12-mobile">
                 <article class="item">
+                    <a href="https://cyberwarfare.live/" class="image fit"><img src="{{ '/images/CyberWarfareLabs.jpg' | relative_url }}" alt="" /></a>
+                    <header>
+                        <h3>The SecOps Group</h3>
+                    </header>
+                </article>
+                <article class="item">
                     <a href="https://secops.group/" class="image fit"><img src="{{ '/images/TheSecOpsGroup.png' | relative_url }}" alt="" /></a>
                     <header>
                         <h3>The SecOps Group</h3>
