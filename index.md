@@ -88,9 +88,11 @@ title: Home
     <div class="container">
         <header>
             <h2>LatePost</h2>
-        </header>
-            
+        </header>        
         <div id="medium-feed"></div>
+        <header>
+            <h2>PenTest Magazine</h2>
+        </header>
         <div class="row">
             <div class="col-4 col-12-mobile">
                 <article class="item">
