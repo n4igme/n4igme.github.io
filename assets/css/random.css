@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Container for centralizing content */
+.container {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+}
+
+/* File input styling */
+input[type="file"] {
+    margin: 0 auto 20px auto;
+    display: block;
+    width: 100%;
+    max-width: 400px; /* Adjust max width as needed */
+}
+
+/* Preformatted text styling */
+pre {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto; /* Allows horizontal scrolling */
+    text-align: left;
+    white-space: pre-wrap; /* Preserve whitespace formatting */
+    box-sizing: border-box; /* Ensure padding and border are included in width calculation */
+}
+
+/* Heading styling */
+h1 {
+    margin: 0 0 20px 0;
+    font-size: 24px;
+    color: #007BFF;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    input[type="file"] {
+        width: 100%;
+        max-width: none;
+    }
+
+    pre {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
