@@ -4,35 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eMail Analyst Tool</title>
-    <!-- Link to external CSS -->
-    <link rel="stylesheet" href="/assets/css/main.css">
     <style>
-        /* Additional styles to center the content */
         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
+            color: #333;
         }
 
-        .container {
+        div {
             text-align: center;
             padding: 20px;
             background: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: #007BFF;
+            width: 90%;
+            max-width: 800px;
         }
 
         input[type="file"] {
             margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         pre {
@@ -41,15 +40,42 @@
             padding: 15px;
             border-radius: 5px;
             width: 100%;
-            max-width: 800px;
+            max-width: 100%;
             overflow: auto;
             text-align: left;
             white-space: pre-wrap; /* Preserve whitespace formatting */
         }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #007BFF;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 18px;
+            }
+
+            input[type="file"] {
+                width: 100%;
+            }
+
+            pre {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div>
         <h1>eMail Analyst Tool</h1>
         <input type="file" id="emlFileInput">
         <pre id="output"></pre>
