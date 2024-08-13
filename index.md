@@ -56,9 +56,9 @@ title: Home
             </div>
             <div class="col-4 col-12-mobile">
                 <article class="item">
-                    <a href="https://csilinux.com/academy/" class="image fit"><img src="{{ '/images/CSILinuxCI.png' | relative_url }}" alt="" /></a>
+                    <a href="https://cyberwarfare.live/" class="image fit"><img src="{{ '/images/CyberWarfareLabs.jpeg' | relative_url }}" alt="" /></a>
                     <header>
-                        <h3>CSI Linux</h3>
+                        <h3>CyberWarfare Labs</h3>
                     </header>
                 </article>
                 <article class="item">
@@ -68,9 +68,9 @@ title: Home
                     </header>
                 </article>               
                 <article class="item">
-                    <a href="https://cyberwarfare.live/" class="image fit"><img src="{{ '/images/CyberWarfareLabs.jpeg' | relative_url }}" alt="" /></a>
+                    <a href="https://csilinux.com/academy/" class="image fit"><img src="{{ '/images/CSILinux.png' | relative_url }}" alt="" /></a>
                     <header>
-                        <h3>CyberWarfare Labs</h3>
+                        <h3>CSI Linux</h3>
                     </header>
                 </article>
             </div>
