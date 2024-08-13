@@ -42,6 +42,12 @@ title: Home
         <div class="row">
             <div class="col-4 col-12-mobile">
                 <article class="item">
+                    <a href="https://university.pagerduty.com/page/certification/" class="image fit"><img src="{{ '/images/PagerDuty.png' | relative_url }}" alt="" /></a>
+                    <header>
+                        <h3>The Linux Foundation</h3>
+                    </header>
+                </article>
+                <article class="item">
                     <a href="https://training.linuxfoundation.org/certification-catalog/" class="image fit"><img src="{{ '/images/LinuxFoundation.png' | relative_url }}" alt="" /></a>
                     <header>
                         <h3>The Linux Foundation</h3>
@@ -63,6 +69,12 @@ title: Home
                 </article>
             </div>
             <div class="col-4 col-12-mobile">
+                <article class="item">
+                    <a href="https://www.hackerrank.com/skills-verification/" class="image fit"><img src="{{ '/images/HackerRank.png' | relative_url }}" alt="" /></a>
+                    <header>
+                        <h3>Qualys</h3>
+                    </header>
+                </article>
                 <article class="item">
                     <a href="https://www.qualys.com/training/" class="image fit"><img src="{{ '/images/Qualys.png' | relative_url }}" alt="" /></a>
                     <header>
