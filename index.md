@@ -91,7 +91,7 @@ title: Home
         </header>        
         <div id="medium-feed"></div>
         <header>
-            <h2>PenTest Magazine</h2>
+            <h2></h2>
         </header>
         <div class="row">
             <div class="col-4 col-12-mobile">
