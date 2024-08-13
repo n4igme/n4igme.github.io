@@ -14,7 +14,7 @@ title: Home
                 <article class="item">
                     <a href="https://github.com/n4igme/pvascan" class="image fit"><img src="/images/pythonvascan.jpg" alt="" /></a>
                     <header>
-                        <h3>Python Vulnerability Scanner Tool</h3>
+                        <h3 style="color: #333;">Python Vulnerability Scanner Tool</h3>
                     </header>
                 </article>
             </div>
@@ -22,7 +22,7 @@ title: Home
                 <article class="item">
                     <a href="https://n4igme.github.io/emlize/" class="image fit"><img src="/images/emailanalysis.jpg" alt="" /></a>
                     <header>
-                        <h3>eMail Analyst Tools</h3>
+                        <h3 style="color: #333;">eMail Analyst Tools</h3>
                     </header>
                 </article>
             </div>
