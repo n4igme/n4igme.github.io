@@ -12,7 +12,7 @@ title: Home
         <div class="row">
             <div class="col-4 col-12-mobile">
                 <article class="item">
-                    <a href="https://github.com/n4igme/pvascan" class="image fit"><img src="{{ '/images/pythonvascan.jpg' | relative_url }}" alt="" /></a>
+                    <a href="https://github.com/n4igme/pvascan" class="image fit"><img src="{{ '/images/PythonVAScan.png' | relative_url }}" alt="" /></a>
                     <header>
                         <h3 style="color: #333;">Python Vulnerability Scanner</h3>
                     </header>
@@ -20,7 +20,7 @@ title: Home
             </div>
             <div class="col-4 col-12-mobile">
                 <article class="item">
-                    <a href="https://n4igme.github.io/emlize/" class="image fit"><img src="{{ '/images/emailanalysis.jpg' | relative_url }}" alt="" /></a>
+                    <a href="https://n4igme.github.io/emlize/" class="image fit"><img src="{{ '/images/eMailAnalysis.png' | relative_url }}" alt="" /></a>
                     <header>
                         <h3 style="color: #333;">eMail Analyst Tools</h3>
                     </header>
@@ -39,6 +39,9 @@ title: Home
             <h2>Who am I?</h2>
         </header>
         <p>Be <b style="color: red;">Red</b>, feel <b style="color: blue;">Blue</b>, and yet behave <b style="color: purple;">Purple</b>.</p>
+        <header>
+            <h2>Collections</h2>
+        </header>
         <div class="row">
             <div class="col-4 col-12-mobile">
                 <article class="item">
