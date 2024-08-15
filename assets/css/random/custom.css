@@ -38,3 +38,8 @@ pre {
     font-family: 'Courier New', Courier, monospace; /* Monospace font for preformatted text */
     color: #333;
 }
+canvas {
+    display: block;
+    margin: 0 auto;
+    background-color: #000; /* Ensure the canvas background is black */
+}
