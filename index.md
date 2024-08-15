@@ -12,9 +12,17 @@ title: Home
         <div class="row">
             <div class="col-4 col-12-mobile">
                 <article class="item">
-                    <a href="https://github.com/n4igme/pvascan" class="image fit"><img src="{{ '/images/PythonVAScan.png' | relative_url }}" alt="" /></a>
+                    <a href="https://github.com/n4igme/pvascan/" class="image fit"><img src="{{ '/images/PythonVAScan.png' | relative_url }}" alt="" /></a>
                     <header>
                         <h3 style="color: #333;">Python Vulnerability Scanner</h3>
+                    </header>
+                </article>
+            </div>
+            <div class="col-4 col-12-mobile">
+                <article class="item">
+                    <a href="https://n4igme.github.io/gamze/" class="image fit"><img src="{{ '/images/MiniGameCollections.png' | relative_url }}" alt="" /></a>
+                    <header>
+                        <h3 style="color: #333;">Mini Game Collections</h3>
                     </header>
                 </article>
             </div>
