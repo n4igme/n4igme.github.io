@@ -20,17 +20,17 @@ title: Home
             </div>
             <div class="col-4 col-12-mobile">
                 <article class="item">
-                    <a href="https://n4igme.github.io/emlize/" class="image fit"><img src="{{ '/images/eMailAnalysis.png' | relative_url }}" alt="" /></a>
+                    <a href="https://github.com/n4igme/pvascan/" class="image fit"><img src="{{ '/images/PythonVAScan.png' | relative_url }}" alt="" /></a>
                     <header>
-                        <h3 style="color: #333;">eMail Analyst Tools</h3>
+                        <h3 style="color: #333;">Python Vulnerability Scanner</h3>
                     </header>
                 </article>
             </div>
             <div class="col-4 col-12-mobile">
                 <article class="item">
-                    <a href="https://github.com/n4igme/pvascan/" class="image fit"><img src="{{ '/images/PythonVAScan.png' | relative_url }}" alt="" /></a>
+                    <a href="https://n4igme.github.io/emlize/" class="image fit"><img src="{{ '/images/eMailAnalysis.png' | relative_url }}" alt="" /></a>
                     <header>
-                        <h3 style="color: #333;">Python Vulnerability Scanner</h3>
+                        <h3 style="color: #333;">eMail Analyst Tools</h3>
                     </header>
                 </article>
             </div>
