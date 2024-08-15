@@ -41,5 +41,5 @@ pre {
 canvas {
     display: block;
     margin: 0 auto;
-    background-color: #000; /* Ensure the canvas background is black */
+    background-color: #333;
 }
