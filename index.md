@@ -48,7 +48,7 @@ title: Home
         </header>
         <p>Be <b style="color: red;">Red</b>, feel <b style="color: blue;">Blue</b>, and yet behave <b style="color: purple;">Purple</b>.</p>
         <header>
-            <h2>Partners</h2>
+            <h2></h2>
         </header>
         <a href="#" class="image featured"><img src="{{ '/images/unnamed.jpeg' | relative_url }}" alt="" /></a>
     </div>
