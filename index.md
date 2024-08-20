@@ -48,58 +48,9 @@ title: Home
         </header>
         <p>Be <b style="color: red;">Red</b>, feel <b style="color: blue;">Blue</b>, and yet behave <b style="color: purple;">Purple</b>.</p>
         <header>
-            <h2>Collections</h2>
+            <h2>Partners</h2>
         </header>
-        <div class="row">
-            <div class="col-4 col-12-mobile">
-                <article class="item">
-                    <a href="https://university.pagerduty.com/page/certification/" class="image fit"><img src="{{ '/images/PagerDuty.png' | relative_url }}" alt="" /></a>
-                    <header>
-                        <h3>PagerDuty University</h3>
-                    </header>
-                </article>
-                <article class="item">
-                    <a href="https://training.linuxfoundation.org/certification-catalog/" class="image fit"><img src="{{ '/images/LinuxFoundation.png' | relative_url }}" alt="" /></a>
-                    <header>
-                        <h3>The Linux Foundation</h3>
-                    </header>
-                </article>
-            </div>
-            <div class="col-4 col-12-mobile">
-                <article class="item">
-                    <a href="https://cyberwarfare.live/" class="image fit"><img src="{{ '/images/CyberWarfareLabs.jpeg' | relative_url }}" alt="" /></a>
-                    <header>
-                        <h3>CyberWarfare Labs</h3>
-                    </header>
-                </article>
-                <article class="item">
-                    <a href="https://www.hackerrank.com/skills-verification/" class="image fit"><img src="{{ '/images/HackerRank.png' | relative_url }}" alt="" /></a>
-                    <header>
-                        <h3>HackerRank</h3>
-                    </header>
-                </article>               
-                <article class="item">
-                    <a href="https://csilinux.com/academy/" class="image fit"><img src="{{ '/images/CSILinux.png' | relative_url }}" alt="" /></a>
-                    <header>
-                        <h3>CSI Linux</h3>
-                    </header>
-                </article>
-            </div>
-            <div class="col-4 col-12-mobile">
-                <article class="item">
-                    <a href="https://secops.group/" class="image fit"><img src="{{ '/images/TheSecOpsGroup.png' | relative_url }}" alt="" /></a>
-                    <header>
-                        <h3>The SecOps Group</h3>
-                    </header>
-                </article>
-                <article class="item">
-                    <a href="https://www.qualys.com/training/" class="image fit"><img src="{{ '/images/Qualys.png' | relative_url }}" alt="" /></a>
-                    <header>
-                        <h3>Qualys</h3>
-                    </header>
-                </article>
-            </div>
-        </div>
+        <a href="#" class="image featured"><img src="{{ '/images/unnamed.jpeg' | relative_url }}" alt="" /></a>
     </div>
 </section>
 
