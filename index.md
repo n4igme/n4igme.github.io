@@ -95,7 +95,7 @@ title: Home
             <h2>. . .</h2>
         </header>
         <header>
-            <h2>WalkThroughs</h2>
+            <h2>WalkThrough</h2>
         </header>
         <div id="wordpress-feed"></div>
     </div>
