@@ -92,10 +92,10 @@ title: Home
             </div>
         </div>
         <header>
-            <h2></h2>
+            <h2>. . .</h2>
         </header>
         <header>
-            <h2>LAB WalkThrough</h2>
+            <h2>WalkThroughs</h2>
         </header>
         <div id="wordpress-feed"></div>
     </div>
