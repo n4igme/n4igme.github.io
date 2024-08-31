@@ -91,6 +91,13 @@ title: Home
                 </article>
             </div>
         </div>
+        <header>
+            <h2></h2>
+        </header>
+        <header>
+            <h2>LAB WalkThrough</h2>
+        </header>
+        <div id="wordpress-feed"></div>
     </div>
 </section>
 
@@ -99,7 +106,6 @@ title: Home
         const sections = document.querySelectorAll('section');
         sections.forEach(section => section.style.display = 'none');
 
-        // Function to show the selected section and hide others
         function showSection(selectedId) {
             sections.forEach(section => {
                 if (section.id === selectedId) {
@@ -110,7 +116,6 @@ title: Home
             });
         }
 
-        // Add event listeners for navigation (modify this part according to your navigation setup)
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -119,10 +124,8 @@ title: Home
             });
         });
 
-        // Show the home section by default
         showSection('home');
 
-        // Medium RSS feed integration
         async function fetchMediumRSS() {
             const rssFeedUrl = 'https://medium.com/feed/@bibib';
             const rssToJsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`;
@@ -130,14 +133,27 @@ title: Home
             try {
                 const response = await fetch(rssToJsonUrl);
                 const data = await response.json();
-                displayFeed(data);
+                displayFeed(data, 'medium-feed');
             } catch (error) {
-                console.error('Error fetching RSS feed:', error);
+                console.error('Error fetching Medium RSS feed:', error);
             }
         }
 
-        function displayFeed(data) {
-            const feedContainer = document.getElementById('medium-feed');
+        async function fetchWordPressRSS() {
+            const rssFeedUrl = 'https://nbsc7.wordpress.com/feed'; // Replace with your WordPress RSS feed URL
+            const rssToJsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`;
+
+            try {
+                const response = await fetch(rssToJsonUrl);
+                const data = await response.json();
+                displayFeed(data, 'wordpress-feed');
+            } catch (error) {
+                console.error('Error fetching WordPress RSS feed:', error);
+            }
+        }
+
+        function displayFeed(data, containerId) {
+            const feedContainer = document.getElementById(containerId);
             const items = data.items;
 
             items.forEach(item => {
@@ -150,5 +166,6 @@ title: Home
         }
 
         fetchMediumRSS();
+        fetchWordPressRSS();
     });
 </script>
