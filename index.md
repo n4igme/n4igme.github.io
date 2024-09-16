@@ -68,6 +68,11 @@ title: Home
     <div class="container">
         <header>
             <h2>LatePost</h2>
+        </header>
+        <div id="rss-feed"></div>
+        <div id="pagination"></div>
+        <header>
+            <h2></h2>
         </header>        
         <div class="row">
             <div class="col-4 col-12-mobile">
@@ -90,8 +95,6 @@ title: Home
         <header>
             <h2>. . .</h2>
         </header>
-        <div id="rss-feed"></div>
-        <div id="pagination"></div>
     </div>
 </section>
 
@@ -175,7 +178,7 @@ title: Home
                 itemsToShow.forEach(item => {
                     const feedItem = document.createElement('div');
                     feedItem.innerHTML = `
-                        <h3>${item.pubDate.toLocaleDateString()} | <a href="${item.link}" target="_blank">${item.title}</a> (${item.source})</h3>
+                        <h3>${item.pubDate.toLocaleDateString()} | <a href="${item.link}" target="_blank">${item.title}</a></h3>
                     `;
                     feedContainer.appendChild(feedItem);
                 });
