@@ -2171,8 +2171,8 @@ input, select, textarea {
 					#nav ul li a.active span:before {
 						color: #e27689;
 					}
-					
-/* RSS */
+
+/* RSS Feed */
 
 	#rss-feed {
 		text-align: left;
@@ -2189,6 +2189,24 @@ input, select, textarea {
 
 	#rss-feed a:hover {
 		text-decoration: underline;
+	}
+
+	#pagination {
+		margin-top: 20px;
+	}
+
+	#pagination button {
+		padding: 5px 10px;
+		margin: 0 5px;
+		cursor: pointer;
+		background-color: #007bff;
+		color: white;
+		border: none;
+		border-radius: 5px;
+	}
+
+	#pagination button:hover {
+		background-color: #0056b3;
 	}
 
 /* Footer */

@@ -91,11 +91,12 @@ title: Home
             <h2>. . .</h2>
         </header>
         <div id="rss-feed"></div>
+        <div id="pagination"></div>
     </div>
 </section>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         const sections = document.querySelectorAll('section');
         sections.forEach(section => section.style.display = 'none');
 
@@ -112,20 +113,22 @@ title: Home
         showSection('home');
 
         document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('click', function(e) {
+            link.addEventListener('click', function (e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href').substring(1);
                 showSection(targetId);
             });
         });
 
+        let allItems = [];
+        let currentPage = 1;
+        const itemsPerPage = 5;
+
         async function fetchRSSFeeds() {
             const feeds = [
                 { url: 'https://medium.com/feed/@bibib', source: 'Medium' },
                 { url: 'https://nbsc7.wordpress.com/feed', source: 'WordPress' }
             ];
-
-            let allItems = [];
 
             for (const feed of feeds) {
                 const rssToJsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}`;
@@ -152,21 +155,24 @@ title: Home
                 }
             }
 
-            displayMergedFeed(allItems);
+            // Sort by date
+            allItems.sort((a, b) => b.pubDate - a.pubDate);
+
+            // Display the first page
+            displayPage(currentPage);
         }
 
-        function displayMergedFeed(items) {
+        function displayPage(page) {
             const feedContainer = document.getElementById('rss-feed');
-            if (!feedContainer) {
-                console.error('Feed container not found.');
-                return;
-            }
+            feedContainer.innerHTML = ''; // Clear current content
 
-            // Sort items by date, descending (most recent first)
-            items.sort((a, b) => b.pubDate - a.pubDate);
+            // Calculate the items to display on the current page
+            const start = (page - 1) * itemsPerPage;
+            const end = page * itemsPerPage;
+            const itemsToShow = allItems.slice(start, end);
 
-            if (items.length) {
-                items.forEach(item => {
+            if (itemsToShow.length) {
+                itemsToShow.forEach(item => {
                     const feedItem = document.createElement('div');
                     feedItem.innerHTML = `
                         <h3>${item.pubDate.toLocaleDateString()} | <a href="${item.link}" target="_blank">${item.title}</a> (${item.source})</h3>
@@ -175,6 +181,38 @@ title: Home
                 });
             } else {
                 feedContainer.innerHTML = 'No feed items available.';
+            }
+
+            // Update pagination controls
+            updatePaginationControls(page);
+        }
+
+        function updatePaginationControls(page) {
+            const paginationContainer = document.getElementById('pagination');
+            paginationContainer.innerHTML = ''; // Clear existing controls
+
+            const totalPages = Math.ceil(allItems.length / itemsPerPage);
+
+            if (totalPages > 1) {
+                if (page > 1) {
+                    const prevButton = document.createElement('button');
+                    prevButton.textContent = 'Previous';
+                    prevButton.onclick = () => {
+                        currentPage--;
+                        displayPage(currentPage);
+                    };
+                    paginationContainer.appendChild(prevButton);
+                }
+
+                if (page < totalPages) {
+                    const nextButton = document.createElement('button');
+                    nextButton.textContent = 'Next';
+                    nextButton.onclick = () => {
+                        currentPage++;
+                        displayPage(currentPage);
+                    };
+                    paginationContainer.appendChild(nextButton);
+                }
             }
         }
 
