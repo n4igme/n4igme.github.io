@@ -2171,6 +2171,25 @@ input, select, textarea {
 					#nav ul li a.active span:before {
 						color: #e27689;
 					}
+					
+/* RSS */
+
+	#rss-feed {
+		text-align: left;
+	}
+
+	#rss-feed h3 {
+		margin: 10px 0;
+	}
+
+	#rss-feed a {
+		text-decoration: none;
+		color: #000;
+	}
+
+	#rss-feed a:hover {
+		text-decoration: underline;
+	}
 
 /* Footer */
 

@@ -69,10 +69,6 @@ title: Home
         <header>
             <h2>LatePost</h2>
         </header>        
-        <div id="rss-feed"></div>
-        <header>
-            <h2></h2>
-        </header>
         <div class="row">
             <div class="col-4 col-12-mobile">
                 <article class="item">
@@ -94,6 +90,7 @@ title: Home
         <header>
             <h2>. . .</h2>
         </header>
+        <div id="rss-feed"></div>
     </div>
 </section>
 
