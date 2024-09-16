@@ -69,7 +69,7 @@ title: Home
         <header>
             <h2>LatePost</h2>
         </header>        
-        <div id="medium-feed"></div>
+        <div id="rss-feed"></div>
         <header>
             <h2></h2>
         </header>
@@ -94,10 +94,6 @@ title: Home
         <header>
             <h2>. . .</h2>
         </header>
-        <header>
-            <h2>WalkThrough</h2>
-        </header>
-        <div id="wordpress-feed"></div>
     </div>
 </section>
 
@@ -126,59 +122,57 @@ title: Home
             });
         });
 
-        async function fetchMediumRSS() {
-            const rssFeedUrl = 'https://medium.com/feed/@bibib'; // Your Medium RSS feed URL
-            const rssToJsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`;
+        async function fetchRSSFeeds() {
+            const feeds = [
+                { url: 'https://medium.com/feed/@bibib', source: 'Medium' },
+                { url: 'https://nbsc7.wordpress.com/feed', source: 'WordPress' }
+            ];
 
-            try {
-                const response = await fetch(rssToJsonUrl);
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                const data = await response.json();
-                displayFeed(data, 'medium-feed');
-            } catch (error) {
-                console.error('Error fetching Medium RSS feed:', error);
-                const mediumFeedContainer = document.getElementById('medium-feed');
-                if (mediumFeedContainer) {
-                    mediumFeedContainer.innerHTML = 'Failed to load Medium feed.';
-                }
-            }
-        }
+            let allItems = [];
 
-        async function fetchWordPressRSS() {
-            const rssFeedUrl = 'https://nbsc7.wordpress.com/feed'; // Replace with your WordPress RSS feed URL
-            const rssToJsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`;
+            for (const feed of feeds) {
+                const rssToJsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}`;
 
-            try {
-                const response = await fetch(rssToJsonUrl);
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                const data = await response.json();
-                displayFeed(data, 'wordpress-feed');
-            } catch (error) {
-                console.error('Error fetching WordPress RSS feed:', error);
-                const wpFeedContainer = document.getElementById('wordpress-feed');
-                if (wpFeedContainer) {
-                    wpFeedContainer.innerHTML = 'Failed to load WordPress feed.';
+                try {
+                    const response = await fetch(rssToJsonUrl);
+                    if (!response.ok) {
+                        throw new Error(`Failed to fetch feed from ${feed.source}`);
+                    }
+                    const data = await response.json();
+                    const items = data.items.map(item => ({
+                        title: item.title,
+                        link: item.link,
+                        pubDate: new Date(item.pubDate),
+                        source: feed.source
+                    }));
+                    allItems = allItems.concat(items);
+                } catch (error) {
+                    console.error(`Error fetching ${feed.source} feed:`, error);
+                    const feedContainer = document.getElementById('rss-feed');
+                    if (feedContainer) {
+                        feedContainer.innerHTML += `<p>Failed to load ${feed.source} feed.</p>`;
+                    }
                 }
             }
+
+            displayMergedFeed(allItems);
         }
 
-        function displayFeed(data, containerId) {
-            const feedContainer = document.getElementById(containerId);
+        function displayMergedFeed(items) {
+            const feedContainer = document.getElementById('rss-feed');
             if (!feedContainer) {
-                console.error('Feed container not found:', containerId);
+                console.error('Feed container not found.');
                 return;
             }
 
-            const items = data.items;
-            if (items && items.length) {
+            // Sort items by date, descending (most recent first)
+            items.sort((a, b) => b.pubDate - a.pubDate);
+
+            if (items.length) {
                 items.forEach(item => {
                     const feedItem = document.createElement('div');
                     feedItem.innerHTML = `
-                        <h3>${new Date(item.pubDate).toLocaleDateString()} | <a href="${item.link}" target="_blank">${item.title}</a></h3>
+                        <h3>${item.pubDate.toLocaleDateString()} | <a href="${item.link}" target="_blank">${item.title}</a> (${item.source})</h3>
                     `;
                     feedContainer.appendChild(feedItem);
                 });
@@ -187,7 +181,6 @@ title: Home
             }
         }
 
-        fetchMediumRSS();
-        fetchWordPressRSS();
+        fetchRSSFeeds();
     });
 </script>
