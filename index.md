@@ -116,6 +116,8 @@ title: Home
             });
         }
 
+        showSection('home');
+
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -124,18 +126,23 @@ title: Home
             });
         });
 
-        showSection('home');
-
         async function fetchMediumRSS() {
-            const rssFeedUrl = 'https://medium.com/feed/@bibib';
+            const rssFeedUrl = 'https://medium.com/feed/@bibib'; // Your Medium RSS feed URL
             const rssToJsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`;
 
             try {
                 const response = await fetch(rssToJsonUrl);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
                 const data = await response.json();
                 displayFeed(data, 'medium-feed');
             } catch (error) {
                 console.error('Error fetching Medium RSS feed:', error);
+                const mediumFeedContainer = document.getElementById('medium-feed');
+                if (mediumFeedContainer) {
+                    mediumFeedContainer.innerHTML = 'Failed to load Medium feed.';
+                }
             }
         }
 
@@ -145,24 +152,39 @@ title: Home
 
             try {
                 const response = await fetch(rssToJsonUrl);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
                 const data = await response.json();
                 displayFeed(data, 'wordpress-feed');
             } catch (error) {
                 console.error('Error fetching WordPress RSS feed:', error);
+                const wpFeedContainer = document.getElementById('wordpress-feed');
+                if (wpFeedContainer) {
+                    wpFeedContainer.innerHTML = 'Failed to load WordPress feed.';
+                }
             }
         }
 
         function displayFeed(data, containerId) {
             const feedContainer = document.getElementById(containerId);
-            const items = data.items;
+            if (!feedContainer) {
+                console.error('Feed container not found:', containerId);
+                return;
+            }
 
-            items.forEach(item => {
-                const feedItem = document.createElement('div');
-                feedItem.innerHTML = `
-                    <h3>${new Date(item.pubDate).toLocaleDateString()} | <a href="${item.link}" target="_blank">${item.title}</a></h3>
-                `;
-                feedContainer.appendChild(feedItem);
-            });
+            const items = data.items;
+            if (items && items.length) {
+                items.forEach(item => {
+                    const feedItem = document.createElement('div');
+                    feedItem.innerHTML = `
+                        <h3>${new Date(item.pubDate).toLocaleDateString()} | <a href="${item.link}" target="_blank">${item.title}</a></h3>
+                    `;
+                    feedContainer.appendChild(feedItem);
+                });
+            } else {
+                feedContainer.innerHTML = 'No feed items available.';
+            }
         }
 
         fetchMediumRSS();
