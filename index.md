@@ -199,7 +199,7 @@ title: Home
             if (totalPages > 1) {
                 if (page > 1) {
                     const prevButton = document.createElement('button');
-                    prevButton.textContent = 'Previous';
+                    prevButton.textContent = '<<';
                     prevButton.onclick = () => {
                         currentPage--;
                         displayPage(currentPage);
@@ -209,7 +209,7 @@ title: Home
 
                 if (page < totalPages) {
                     const nextButton = document.createElement('button');
-                    nextButton.textContent = 'Next';
+                    nextButton.textContent = '>>';
                     nextButton.onclick = () => {
                         currentPage++;
                         displayPage(currentPage);

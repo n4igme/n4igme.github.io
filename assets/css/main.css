@@ -2192,21 +2192,21 @@ input, select, textarea {
 	}
 
 	#pagination {
-		margin-top: 64px;
+		margin-top: 20px;
 	}
 
 	#pagination button {
 		padding: 5px 10px;
 		margin: 0 5px;
 		cursor: pointer;
-		background-color: #007bff;
+		background-color: #222629;
 		color: white;
 		border: none;
 		border-radius: 5px;
 	}
 
 	#pagination button:hover {
-		background-color: #0056b3;
+		background-color: #151819;
 	}
 
 /* Footer */
