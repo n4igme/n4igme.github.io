@@ -130,7 +130,8 @@ title: Home
         async function fetchRSSFeeds() {
             const feeds = [
                 { url: 'https://medium.com/feed/@bibib', source: 'Medium' },
-                { url: 'https://nbsc7.wordpress.com/feed', source: 'WordPress' }
+                { url: 'https://nbsc7.wordpress.com/feed', source: 'WordPress' },
+                { url: 'https://kumelsnote.blogspot.com/feeds/posts/default?alt=rss', source: 'Blogspot' }
             ];
 
             for (const feed of feeds) {
@@ -178,7 +179,7 @@ title: Home
                 itemsToShow.forEach(item => {
                     const feedItem = document.createElement('div');
                     feedItem.innerHTML = `
-                        <h3>${item.pubDate.toLocaleDateString()} | <a href="${item.link}" target="_blank">${item.title}</a></h3>
+                        <h3>${item.pubDate.toLocaleDateString()} ${item.source} | <a href="${item.link}" target="_blank">${item.title}</a></h3>
                     `;
                     feedContainer.appendChild(feedItem);
                 });
