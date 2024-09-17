@@ -179,7 +179,7 @@ title: Home
                 itemsToShow.forEach(item => {
                     const feedItem = document.createElement('div');
                     feedItem.innerHTML = `
-                        <h3>${item.pubDate.toLocaleDateString()} ${item.source} | <a href="${item.link}" target="_blank">${item.title}</a></h3>
+                        <h3>${item.pubDate.toLocaleDateString()} - ${item.source} | <a href="${item.link}" target="_blank">${item.title}</a></h3>
                     `;
                     feedContainer.appendChild(feedItem);
                 });
