@@ -66,7 +66,7 @@ title: Home
                 border-radius: 16px;
                 background-color: #0A66C2;
                 font-family: "SF Pro Text", Helvetica, sans-serif;
-                font-size: 12px; 
+                font-size: 14px; 
             }
         </style>
         <center><a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=maruha" target="_blank">Follow on LinkedIn</a></center>
