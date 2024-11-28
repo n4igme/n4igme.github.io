@@ -144,7 +144,7 @@ title: Home
 
         let allItems = [];
         let currentPage = 1;
-        const itemsPerPage = 5;
+        const itemsPerPage = 7;
 
         async function fetchRSSFeeds() {
             const feeds = [
