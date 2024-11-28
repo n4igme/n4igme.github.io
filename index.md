@@ -48,28 +48,27 @@ title: Home
         </header>
         <p>Be <b style="color: red;">Red</b>, feel <b style="color: blue;">Blue</b>, and yet behave <b style="color: purple;">Purple</b>.</p>
         <header>
-            <h2>          
-                <style>
-                    .libutton {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    padding: 7px;
-                    text-align: center;
-                    outline: none;
-                    text-decoration: none !important;
-                    color: #ffffff !important;
-                    width: 200px;
-                    height: 32px;
-                    border-radius: 16px;
-                    background-color: #0A66C2;
-                    font-family: "SF Pro Text", Helvetica, sans-serif;
-                    }
-                </style>
-                <a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=maruha" target="_blank">Follow on LinkedIn</a>
-            </h2>
+            <h2></h2>
         </header>
         <a href="#" class="image featured"><img src="{{ '/images/unnamed.jpeg' | relative_url }}" alt="" /></a>
+        <style>
+            .libutton {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 7px;
+            text-align: center;
+            outline: none;
+            text-decoration: none !important;
+            color: #ffffff !important;
+            width: 200px;
+            height: 32px;
+            border-radius: 16px;
+            background-color: #0A66C2;
+            font-family: "SF Pro Text", Helvetica, sans-serif;
+            }
+        </style>
+        <a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=maruha" target="_blank">Follow on LinkedIn</a>
     </div>
 </section>
 
