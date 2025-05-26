@@ -93,7 +93,7 @@ title: Home
         <header>
             <h2></h2>
         </header>        
-        <!-- <div class="row">
+        <div class="row">
             <div class="col-4 col-12-mobile">
                 <article class="item">
                     <a href="https://pentestmag.com/ensuring-application-security-in-the-workplace/" class="image fit"><img src="https://pentestmag.com/wp-content/uploads/2023/12/hakin9_Application_Security_in_the_Workplace_30ff5068-8db4-4250-9f01-6724fd3bdde8.jpg" alt="" /></a>
@@ -113,7 +113,7 @@ title: Home
         </div>
         <header>
             <h2>. . .</h2>
-        </header>-->
+        </header>
     </div>
 </section>
 
