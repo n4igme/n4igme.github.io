@@ -14,7 +14,7 @@ title: Home
                 <article class="item">
                     <a href="https://n4igme.github.io/gamze/" class="image fit"><img src="{{ '/images/MiniGameCollections.png' | relative_url }}" alt="" /></a>
                     <header>
-                        <h3 style="color: #333;">Mini Gamez Collections</h3>
+                        <h3 style="color: #333;">Mini-Game Collections</h3>
                     </header>
                 </article>
             </div>
@@ -22,15 +22,15 @@ title: Home
                 <article class="item">
                     <a href="https://github.com/n4igme/pvascan/" class="image fit"><img src="{{ '/images/PythonVAScan.png' | relative_url }}" alt="" /></a>
                     <header>
-                        <h3 style="color: #333;">Python Vulnerability Scanner</h3>
+                        <h3 style="color: #333;">Python-VAScan Project</h3>
                     </header>
                 </article>
             </div>
             <div class="col-4 col-12-mobile">
                 <article class="item">
-                    <a href="https://n4igme.github.io/emlize/" class="image fit"><img src="{{ '/images/eMailAnalysis.png' | relative_url }}" alt="" /></a>
+                    <a href="https://n4igme.github.io/scopstls/" class="image fit"><img src="{{ '/images/eMailAnalysis.png' | relative_url }}" alt="" /></a>
                     <header>
-                        <h3 style="color: #333;">eMail Analyst Tools</h3>
+                        <h3 style="color: #333;">Security-Ops Tools</h3>
                     </header>
                 </article>
             </div>
@@ -50,7 +50,7 @@ title: Home
         <header>
             <h2></h2>
         </header>
-        <a href="#" class="image featured"><img src="{{ '/images/unnamed.jpeg' | relative_url }}" alt="" /></a>
+        <a href="#" class="image featured"><img src="{{ '/images/unnamed.webp' | relative_url }}" alt="" /></a>
         <style>
             .libutton {
                 display: flex;
@@ -79,7 +79,7 @@ title: Home
             <h2>YouTube Channel</h2>
         </header>
     </div>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Dc5sQPeqo5w" frameborder="0" allowfullscreen></iframe><br/>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XXZ_PV_Tg0Y" frameborder="0" allowfullscreen></iframe><br/>
     <a href="https://www.youtube.com/channel/UCk8gNn8kHS0muE_d2jRuIpw" target="_blank" class="icon brands fa-youtube-square"> Visit on YouTube</a>
 </section>
 
