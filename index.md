@@ -28,7 +28,7 @@ title: Home
             </div>
             <div class="col-4 col-12-mobile">
                 <article class="item">
-                    <a href="https://n4igme.github.io/scopstls/" class="image fit"><img src="{{ '/images/eMailAnalysis.png' | relative_url }}" alt="" /></a>
+                    <a href="https://n4igme.github.io/scopstls/" class="image fit"><img src="{{ '/images/SecOpsTools.png' | relative_url }}" alt="" /></a>
                     <header>
                         <h3 style="color: #333;">Security-Ops Tools</h3>
                     </header>
