@@ -110,6 +110,14 @@ title: Home
                     </header>
                 </article>
             </div>
+            <div class="col-4 col-12-mobile">
+                <article class="item">
+                    <a href="https://hakin9.org/product/the-invisible-war/" class="image fit"><img src="https://hakin9.org/wp-content/uploads/2025/12/unnamed.jpg" alt="" /></a>
+                    <header>
+                        <h3>Create a VM-Like Snapshot on Your Physical Machine</h3>
+                    </header>
+                </article>
+            </div>
         </div>
         <header>
             <h2>. . .</h2>
@@ -198,7 +206,7 @@ title: Home
                 itemsToShow.forEach(item => {
                     const feedItem = document.createElement('div');
                     feedItem.innerHTML = `
-                        <h3>${item.pubDate.toLocaleDateString()} - ${item.source} | <a href="${item.link}" target="_blank">${item.title}</a></h3>
+                        <h4>${item.pubDate.toLocaleDateString()} - ${item.source} | <a href="${item.link}" target="_blank">${item.title}</a></h4>
                     `;
                     feedContainer.appendChild(feedItem);
                 });
