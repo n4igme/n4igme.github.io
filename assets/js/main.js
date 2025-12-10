@@ -29,28 +29,38 @@
 	// Nav.
 		var $nav_a = $nav.find('a');
 
-		$nav_a
-			.addClass('scrolly')
-			.on('click', function(e) {
+		// Separate internal and external links
+		var $internal_links = $nav_a.filter(function() {
+			return $(this).attr('href').charAt(0) === '#';
+		});
+		var $external_links = $nav_a.not($internal_links);
 
-				var $this = $(this);
+		// Apply scrolly class only to internal links
+		$internal_links.addClass('scrolly');
 
-				// External link? Bail.
-					if ($this.attr('href').charAt(0) != '#')
-						return;
+		// Handle internal links with special behavior
+		$internal_links.on('click', function(e) {
 
-				// Prevent default.
-					e.preventDefault();
+			var $this = $(this);
 
-				// Deactivate all links.
-					$nav_a.removeClass('active');
+			// Prevent default.
+				e.preventDefault();
 
-				// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
-					$this
-						.addClass('active')
-						.addClass('active-locked');
+			// Deactivate all links.
+				$nav_a.removeClass('active');
 
-			})
+			// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
+				$this
+					.addClass('active')
+					.addClass('active-locked');
+
+		});
+
+		// External links don't get special handling - they should work normally
+		$external_links.addClass('external-link');
+
+		// Apply scrollex only to internal links that have corresponding sections
+		$internal_links
 			.each(function() {
 
 				var	$this = $(this),
@@ -94,7 +104,7 @@
 
 			});
 
-	// Scrolly.
+	// Scrolly - only apply to internal links (scrolly class was only added to internal links)
 		$('.scrolly').scrolly();
 
 	// Header (narrower + mobile).
