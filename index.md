@@ -157,7 +157,7 @@ title: Home
         async function fetchRSSFeeds() {
             const feeds = [
                 { url: 'https://medium.com/feed/@bibib', source: 'Medium' },
-                { url: 'https://nbsc7.wordpress.com/feed', source: 'WordPress' },
+                { url: 'https://gist.github.com/n4igme.atom', source: 'Gist' },
                 { url: 'https://kumelsnote.blogspot.com/feeds/posts/default?alt=rss', source: 'Blogspot' }
             ];
 
